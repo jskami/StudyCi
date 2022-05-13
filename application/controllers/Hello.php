@@ -35,11 +35,26 @@ class Hello extends CI_Controller {
         $this->load->view('templates/footer', $data);
     }
 
+    // 모델을 로딩하자!
     public function member() {
-        $this->load->model('Member_model');
-        $data['member'] = $this->Member_model->GetMember();
+        $this->load->model('Member_model'); // 모델을 로드한다.
+        $data['member'] = $this->Member_model->GetMember(); // 모델에 GetMember 메서드를 사용한다.
+        $this->load->view('Member/member', $data);  // 모델에서 가져온 값을 뷰에 전달한다.
+    }
+    // 이제 뷰를 생성하러 가보자.
+
+    public function member_db1() {
+        $this->load->model('Hello/Member_model');
+        $data['member'] = $this->Member_model->GetMemberByDB1();
         $this->load->view('Member/member', $data);
     }
+
+    public function member_db2() {
+        $this->load->model('Hello/Member_model');
+        $data['member'] = $this->Member_model->GetMemberByDB2();
+        $this->load->view('Member/member', $data);
+    }
+
 
 }
 // URL은 "서버주소/폴더명/해당php파일명/클래스명/클래스의 함수명"

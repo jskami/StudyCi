@@ -1,3 +1,4 @@
+<!-- Creating a view -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +16,16 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach($member as $id => $name) :?>
+            <?php foreach($member as $member) :?>
                 <tr>
-                    <td><?=$id?></td>
-                    <td><?=$name?></td>
+                    <td><?=$member->id?></td>
+                    <td><?=$member->name?></td>
+                    <br>
                 </tr>
             <?php endforeach ?>
         </tbody>
     </table>
 </body>
 </html>
+
+<!-- foreach를 사용하여 모델에서 가져온 데이터를 출력한다. -->

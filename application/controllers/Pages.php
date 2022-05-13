@@ -6,9 +6,13 @@ class Pages extends CI_Controller {
     
     public function my1() {
         $this->load->view('mypractice1');
+        $this->load->view('templates/header');
+        $this->load->view('templates/footer');
     }
 
     public function my2() {
         $this->load->view('mypractice2');
+        $this->load->view('templates/header');
+        $this->load->view('templates/footer');
     }
 }
