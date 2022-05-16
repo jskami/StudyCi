@@ -44,13 +44,13 @@ class Hello extends CI_Controller {
     // 이제 뷰를 생성하러 가보자.
 
     public function member_db1() {
-        $this->load->model('Hello/Member_model');
+        $this->load->model('Member_model');
         $data['member'] = $this->Member_model->GetMemberByDB1();
         $this->load->view('Member/member', $data);
     }
 
     public function member_db2() {
-        $this->load->model('Hello/Member_model');
+        $this->load->model('Member_model');
         $data['member'] = $this->Member_model->GetMemberByDB2();
         $this->load->view('Member/member', $data);
     }

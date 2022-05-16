@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach($member as $member) :?>
+            <?php foreach($result as $member) :?>
                 <tr>
                     <td><?=$member->id?></td>
                     <td><?=$member->name?></td>

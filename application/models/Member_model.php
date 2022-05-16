@@ -8,8 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Member_model extends CI_Model {
     public function __contruct() {
         parent::__construct();
-        $this->db1 = $this->load->database('db1', true);
-        $this->db2 = $this->load->database('db2', true);    // 다중 db 연결
+        $this->db1 = $this->load->database('myci', true);
+        $this->db2 = $this->load->database('myci2', true);    // 다중 db 연결
 
     }   // Member_model 클래스의 생성자이다.
 
@@ -21,23 +21,23 @@ class Member_model extends CI_Model {
         '5' => '친구E'
     );  // 데이터를 DB에서 가져오는 것을 대체하기 위한 배열 값이다.
 
-    public function GetMember() {
-        $this->load->database();
-        $result = $this->db1->query('SELECT `id`, `name` FROM member')->result();    // DB에 쿼리를 보내고 그 결과를 객체로 반환해주는 코드.
-        $this->db->close(); // 작업이 끝나면 수동으로 해당 코드의 연결을 끊어주도록 한다.
+    // public function GetMember() {
+    //     $this->load->database();
+    //     $result = $this->db1->query('SELECT id, name FROM member')->result();    // DB에 쿼리를 보내고 그 결과를 객체로 반환해주는 코드.
+    //     $this->db1->close(); // 작업이 끝나면 수동으로 해당 코드의 연결을 끊어주도록 한다.
 
-        return $result;
-        // return $this->member;
-    }   // member 배열에 존재하는 값을 반환해주는 메서드이다.
+    //     return $result;
+    //     // return $this->member;
+    // }   // member 배열에 존재하는 값을 반환해주는 메서드이다.
 
     public function GetMemberByDB1() {
-        $result = $this->db1->query('SELECT `id`, `name` FROM member')->result();
+        $result = $this->db1->query('SELECT id, name FROM member')->result();
         $this->db1->close();
         return $result;
     }
 
     public function GetMemberByDB2() {
-        $result = $this->db2->query('SELECT `id`, `name` FROM member')->result();
+        $result = $this->db2->query('SELECT id, name FROM member')->result();
         $this->db2->close();
         return $result;
     }

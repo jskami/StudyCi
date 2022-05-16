@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-$db['db1'] = array(
+$db1['myCI'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',	// 호스트명
 	'username' => 'root',	// DB사용자
@@ -96,7 +96,7 @@ $db['db1'] = array(
 );
 
 // 다중 db 사용하기(설정)
-$db['db2'] = array(
+$db2['myCI2'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',	// 호스트명
 	'username' => 'root',	// DB사용자
