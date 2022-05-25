@@ -1,4 +1,5 @@
 <?php
+/* 22.05.12 start */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Hello extends CI_Controller {
@@ -43,17 +44,17 @@ class Hello extends CI_Controller {
     }
     // 이제 뷰를 생성하러 가보자.
 
-    public function member_db1() {
-        $this->load->model('Member_model');
-        $data['member'] = $this->Member_model->GetMemberByDB1();
-        $this->load->view('Member/member', $data);
-    }
+    // public function member_db() {
+    //     $this->load->model('Member_model');
+    //     $data['member'] = $this->Member_model->GetMemberByDB1();
+    //     $this->load->view('Member/member', $data);
+    // }
 
-    public function member_db2() {
-        $this->load->model('Member_model');
-        $data['member'] = $this->Member_model->GetMemberByDB2();
-        $this->load->view('Member/member', $data);
-    }
+    // public function member_db2() {
+    //     $this->load->model('Member_model');
+    //     $data['member'] = $this->Member_model->GetMemberByDB2();
+    //     $this->load->view('Member/member', $data);
+    // }
 
 
 }

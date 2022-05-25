@@ -17,7 +17,7 @@ class Welcome extends CI_Controller {
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
-	 */
+	 * CI의 주소체계는 http://호스트/컨트롤러/메서드로 되어있다.*/
 	public function index()
 	{
 		$this->load->view('welcome_message');

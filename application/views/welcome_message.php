@@ -81,6 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="container">
 	<h1>Welcome to CodeIgniter!</h1>
 
+	<h3> &nbsp; 코드이그나이터 설치 후 볼 수 있는 화면</h3>
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 

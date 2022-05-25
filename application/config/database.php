@@ -73,12 +73,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-$db1['myCI'] = array(
+$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',	// 호스트명
 	'username' => 'root',	// DB사용자
 	'password' => '',	// 현재 암호 지정 안했음
-	'database' => 'myCI',	// 불러올 DB명
+	'database' => 'myci',	// 불러올 DB명
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -96,24 +96,24 @@ $db1['myCI'] = array(
 );
 
 // 다중 db 사용하기(설정)
-$db2['myCI2'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',	// 호스트명
-	'username' => 'root',	// DB사용자
-	'password' => '',	// 현재 암호 지정 안했음
-	'database' => 'myCI2',	// 불러올 DB명
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
-);
+// $db2['myCI2'] = array(
+// 	'dsn'	=> '',
+// 	'hostname' => 'localhost',	// 호스트명
+// 	'username' => 'root',	// DB사용자
+// 	'password' => '',	// 현재 암호 지정 안했음
+// 	'database' => 'myCI2',	// 불러올 DB명
+// 	'dbdriver' => 'mysqli',
+// 	'dbprefix' => '',
+// 	'pconnect' => FALSE,
+// 	'db_debug' => (ENVIRONMENT !== 'production'),
+// 	'cache_on' => FALSE,
+// 	'cachedir' => '',
+// 	'char_set' => 'utf8',
+// 	'dbcollat' => 'utf8_general_ci',
+// 	'swap_pre' => '',
+// 	'encrypt' => FALSE,
+// 	'compress' => FALSE,
+// 	'stricton' => FALSE,
+// 	'failover' => array(),
+// 	'save_queries' => TRUE
+// );
